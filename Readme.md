@@ -151,9 +151,35 @@ model
 
 ```bash
 dto
-├── CategoryCreateRequest.java
-├── CategoryUpdateRequest.java
-└── CategoryResponse.java
+├── BuyerCreateRequest.class
+├── BuyerResponse.class
+├── BuyerUpdateRequest.class
+├── CategoryCreateRequest.class
+├── CategoryResponse.class
+├── CategoryUpdateRequest.class
+├── ProductCreateRequest.class
+├── ProductResponse.class
+├── ProductSupplierCreateRequest.class
+├── ProductSupplierResponse.class
+├── ProductSupplierUpdateRequest.class
+├── ProductUpdateRequest.class
+├── PurchaseCreateRequest.class
+├── PurchaseLineRequest.class
+├── PurchaseLineResponse.class
+├── PurchaseResponse.class
+├── SalesCreateRequest.class
+├── SalesLineRequest.class
+├── SalesLineResponse.class
+├── SalesResponse.class
+├── StockInitializeRequest.class
+├── StockResponse.class
+├── StockTransactionResponse.class
+├── SupplierCreateRequest.class
+├── SupplierResponse.class
+├── SupplierUpdateRequest.class
+├── WarehouseCreateRequest.class
+├── WarehouseResponse.class
+└── WarehouseUpdateRequest.class
 ```
 
 ### Phase 7: Repository Layer
@@ -331,5 +357,13 @@ controller
 
 ```bash
 exception
-├── GlobalExceptionHandler
+├── ApiError.java
+├── ErrorResponse.java
+├── GlobalExceptionHandler.java
+├── ResourceNotFoundException.java
+├── DuplicateResourceException.java
+├── BusinessException.java
+├── DatabaseException.java
+├── ValidationException.java
+└── UnauthorizedException.java   (Later)
 ```
