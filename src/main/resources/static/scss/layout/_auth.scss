@@ -1,0 +1,371 @@
+/*--------------------------------------------------------------
+# Auth Layout - LiteAdmin
+--------------------------------------------------------------*/
+
+.fauth {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 0, transparent 40%),
+    radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--info-color), transparent 96%) 0, transparent 36%),
+    var(--background-color);
+}
+
+.fauth-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.fauth-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fauth-main-inner {
+  width: 100%;
+  max-width: 500px;
+}
+
+.fauth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: var(--heading-color);
+  font-size: 1.02rem;
+  font-weight: 700;
+
+  img {
+    height: 22px;
+    width: auto;
+  }
+}
+
+.fauth-logo-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.fauth-stage {
+  margin-bottom: 0.65rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.42rem 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  .fauth-stage-text {
+    font-size: 0.74rem;
+    color: var(--muted-color);
+  }
+
+  .fauth-stage-chip {
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 58%);
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 94%);
+    border-radius: var(--radius-full);
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.14rem 0.42rem;
+  }
+}
+
+.fauth-card {
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1rem;
+}
+
+.fauth-card-sm {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.fauth-card-head {
+  margin-bottom: 0.8rem;
+}
+
+.fauth-title {
+  margin: 0;
+  color: var(--heading-color);
+  font-size: 1.32rem;
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.fauth-subtitle {
+  margin: 0.28rem 0 0;
+  color: var(--muted-color);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.fauth-form {
+  .form-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 0.34rem;
+  }
+
+  .form-control,
+  .form-select {
+    height: 38px;
+    border-color: var(--input-border);
+    background: var(--input-bg);
+    color: var(--default-color);
+    font-size: 0.83rem;
+    border-radius: var(--radius-sm);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: var(--input-focus-border);
+    }
+  }
+
+  textarea.form-control {
+    height: auto;
+  }
+
+  .input-group .btn {
+    border-color: var(--input-border);
+    color: var(--muted-color);
+    background: var(--input-bg);
+
+    &:hover {
+      background: var(--background-color);
+      color: var(--default-color);
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: var(--input-focus-border);
+    }
+  }
+
+  .form-check {
+    margin: 0;
+
+    .form-check-input {
+      margin-top: 0.18rem;
+      width: 15px;
+      height: 15px;
+    }
+
+    .form-check-label {
+      color: var(--default-color);
+      font-size: 0.77rem;
+    }
+  }
+
+  .form-text {
+    margin-top: 0.3rem;
+    font-size: 0.72rem;
+    color: var(--muted-color);
+  }
+
+  .btn-primary {
+    height: 38px;
+    font-weight: 700;
+    font-size: 0.83rem;
+  }
+}
+
+.fauth-field {
+  margin-bottom: 0.62rem;
+}
+
+.fauth-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.fauth-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  &:hover {
+    color: color-mix(in srgb, var(--accent-color), black 20%);
+  }
+}
+
+.fauth-divider {
+  margin: 0.75rem 0;
+  position: relative;
+  text-align: center;
+
+  span {
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
+    padding: 0 0.5rem;
+    font-size: 0.71rem;
+    color: var(--muted-color);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border-color);
+  }
+}
+
+.fauth-social {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+
+  .btn {
+    height: 36px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+}
+
+.fauth-foot-text {
+  margin: 0.72rem 0 0;
+  color: var(--muted-color);
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+.fauth-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  margin: 0 auto 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+}
+
+.fauth-icon-success {
+  color: var(--success-color);
+  background: var(--success-color-light);
+}
+
+.fauth-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.55rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--card-bg);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.fauth-otp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.fauth-otp-input {
+  width: 40px;
+  height: 46px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.fauth-otp-gap {
+  color: var(--muted-color);
+  font-weight: 700;
+}
+
+.footer-centered {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 0.72rem;
+
+  .footer-copyright {
+    margin-bottom: 0.24rem;
+
+    a {
+      color: var(--default-color);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    a {
+      color: var(--muted-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .fauth-centered {
+    padding: 0.7rem;
+  }
+
+  .fauth-card {
+    padding: 0.85rem;
+  }
+
+  .fauth-title {
+    font-size: 1.2rem;
+  }
+
+  .fauth-row-between {
+    flex-wrap: wrap;
+  }
+
+  .fauth-social {
+    grid-template-columns: 1fr;
+  }
+
+  .fauth-otp-input {
+    width: 34px;
+    height: 40px;
+    font-size: 0.98rem;
+  }
+}
